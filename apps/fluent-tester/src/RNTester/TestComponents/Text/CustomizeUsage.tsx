@@ -6,9 +6,11 @@ import { stackStyle } from '../Common/styles';
 import { styles } from './styles';
 
 export const CustomizeUsage: React.FunctionComponent<{}> = () => {
-  const RedCaptionBold = Text.customize({ tokens: { variant: 'captionStandard', fontWeight: 'semiBold', color: '#ff0000' } });
-  const OrangeSecondaryBold = Text.customize({ tokens: { variant: 'secondaryStandard', fontWeight: 'semiBold', color: '#ff9900' } });
-  const YellowBodyBold = Text.customize({ tokens: { variant: 'bodyStandard', fontWeight: 'semiBold', color: '#f3ce00' } });
+  const RedCaptionBold = Text.customize({ tokens: { variant: 'captionStandard', fontWeight: '400', color: '#ff0000' } });
+  const OrangeSecondaryBold = Text.customize({
+    tokens: { variant: 'secondaryStandard', fontWeight: '600', color: '#ff9900', fontSize: 30 }
+  });
+  const YellowBodyBold = Text.customize({ tokens: { variant: 'bodyStandard', fontWeight: '700', color: '#f3ce00', fontSize: 17 } });
   const GreenSubheaderBold = Text.customize({ tokens: { variant: 'subheaderStandard', fontWeight: 'semiBold', color: '#02c440' } });
   const BlueHeaderBold = Text.customize({ tokens: { variant: 'headerStandard', fontWeight: 'semiBold', color: '#0229c4' } });
   const IndigoHeroBold = Text.customize({ tokens: { variant: 'heroStandard', fontWeight: 'semiBold', color: '#4b0082' } });
@@ -25,7 +27,10 @@ export const CustomizeUsage: React.FunctionComponent<{}> = () => {
   return (
     <View style={styles.root}>
       <Stack style={stackStyle} gap={5}>
-        <RedCaptionBold>RedCaptionBold</RedCaptionBold>
+        <RedCaptionBold>
+          RedCaptionBold
+          <OrangeSecondaryBold>OrangeSecondaryBold</OrangeSecondaryBold>
+        </RedCaptionBold>
         <OrangeSecondaryBold>OrangeSecondaryBold</OrangeSecondaryBold>
         <YellowBodyBold>YellowBodyBold</YellowBodyBold>
         <GreenSubheaderBold>GreenSubheaderBold</GreenSubheaderBold>
