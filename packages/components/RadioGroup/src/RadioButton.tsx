@@ -56,13 +56,6 @@ export const RadioButton = compose<IRadioButtonType>({
       }
     }, [state, pressable.props, info, buttonKey]);
 
-    let accessibilityStates: string[] = [];
-    if (state.disabled) {
-      accessibilityStates = ['disabled'];
-    } else if (state.selected) {
-      accessibilityStates = ['selected'];
-    }
-
     const slotProps = mergeSettings<IRadioButtonSlotProps>(styleProps, {
       root: {
         rest,
@@ -70,7 +63,7 @@ export const RadioButton = compose<IRadioButtonType>({
         onFocus: onFocusChange,
         accessibilityRole: 'radio',
         accessibilityLabel: ariaLabel ? ariaLabel : content,
-        accessibilityStates: accessibilityStates,
+        accessibilityState: { disabled: state.disabled, selected: state.selected },
         accessibilityActions: [{ name: 'Select', label: radioButtonSelectActionLabel }],
         onAccessibilityAction: onAccessibilityAction
       },
