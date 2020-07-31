@@ -4,6 +4,7 @@ import * as renderer from 'react-test-renderer';
 import { composeFactory, UseStyledSlots } from './composeFactory';
 import { ViewProps, View, Text, TextProps } from 'react-native';
 import { ThemeHelper } from '@fluentui-react-native/use-styling';
+import '@types/jest';
 
 type Theme = {
   values: {
@@ -48,8 +49,8 @@ const Base = composeFactory<ViewProps, SlotProps, Tokens, Theme>({
     color: t.values.color
   })],
   slotProps: {
-    outer: tokens => ({ style: { backgroundColor: tokens.backgroundColor }}),
-    content: tokens => ({ style: { color: tokens.color }})
+    outer: tokens => ({ style: { backgroundColor: tokens.backgroundColor } }),
+    content: tokens => ({ style: { color: tokens.color } })
   },
   slots: {
     outer: View,

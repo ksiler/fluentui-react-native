@@ -2,6 +2,7 @@ import * as React from 'react';
 import { View } from 'react-native';
 import { Link } from '..';
 import * as renderer from 'react-test-renderer';
+import '@types/jest';
 
 it('Link all props', () => {
   const tree = renderer.create(<Link content="Link all props" url="https://www.bing.com" />).toJSON();

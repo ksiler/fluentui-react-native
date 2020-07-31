@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Stack } from '..';
 import { Text } from '@fluentui-react-native/text';
 import * as renderer from 'react-test-renderer';
+import '@types/jest';
 
 it('Stack with tokens', () => {
   const tree = renderer

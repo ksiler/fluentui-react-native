@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Text } from '..';
 import * as renderer from 'react-test-renderer';
+import '@types/jest';
 
 it('Text default', () => {
   const tree = renderer.create(<Text>Text default</Text>).toJSON();
