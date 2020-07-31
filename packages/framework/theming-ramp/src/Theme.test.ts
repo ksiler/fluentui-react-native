@@ -2,6 +2,7 @@ import { ITheme, IPartialTheme } from './Theme.types';
 import { resolvePartialTheme } from './Theme';
 import { IThemeColorDefinition } from './Color.types';
 import { ITypography } from './Typography.types';
+import '@types/jest';
 
 const theme: ITheme = {
   colors: {

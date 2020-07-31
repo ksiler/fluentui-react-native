@@ -1,3 +1,6 @@
+import '@wdio/jasmine-framework';
+import '@wdio/sync';
+
 const DUMMY_CHAR = '';
 
 export function By(testId: string): WebdriverIO.Element {

@@ -4,6 +4,7 @@ import * as renderer from 'react-test-renderer';
 import { buildUseSlots } from './buildUseSlots';
 import { ViewProps, View, Text, TextProps } from 'react-native';
 import { stagedComponent } from './stagedComponent';
+import '@types/jest';
 
 type SlotProps1 = {
   outer: ViewProps;
