@@ -9,9 +9,14 @@ export const StandardUsage: React.FunctionComponent<{}> = () => {
   return (
     <View>
       <Stack style={stackStyle} gap={5}>
-        <Text variant="captionStandard" testID={TEXT_TESTPAGE}>
-          CaptionStandard
+        <Text variant="heroLargeSemibold" testID={TEXT_TESTPAGE}>
+          This is a Label.
         </Text>
+        <Text variant="heroLargeSemibold">
+          This is a Rich Label.
+          <Text variant="heroLargeSemibold">This is a Rich Label (second run).</Text>
+        </Text>
+        <Text variant="captionStandard">CaptionStandard</Text>
         <Text variant="secondaryStandard">SecondaryStandard</Text>
         <Text variant="secondarySemibold">SecondarySemibold</Text>
         <Text variant="bodyStandard">BodyStandard</Text>
