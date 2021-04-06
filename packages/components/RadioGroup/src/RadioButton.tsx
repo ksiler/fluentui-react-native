@@ -9,7 +9,7 @@ import { filterViewProps } from '@fluentui-react-native/adapters';
 import { ISlots, withSlots } from '@uifabricshared/foundation-composable';
 import { settings, radioButtonSelectActionLabel } from './RadioButton.settings';
 import { mergeSettings } from '@uifabricshared/foundation-settings';
-import { foregroundColorTokens, textTokens, borderTokens, backgroundColorTokens, getPaletteFromTheme} from '@fluentui-react-native/tokens';
+import { foregroundColorTokens, textTokens, borderTokens, backgroundColorTokens, getPaletteFromTheme } from '@fluentui-react-native/tokens';
 import { useAsPressable, useViewCommandFocus } from '@fluentui-react-native/interactive-hooks';
 import { RadioGroupContext } from './RadioGroup';
 
@@ -21,23 +21,25 @@ export const RadioButton = compose<IRadioButtonType>({
 
     // Grabs the context information from RadioGroup (currently selected button and client's onChange callback)
     const info = React.useContext(RadioGroupContext);
-
+    const buttonRef = useViewCommandFocus(componentRef);
     /* We don't want to call the user's onChange multiple times on the same selection. */
     const changeSelection = () => {
-      if(buttonKey != info.selectedKey)
+      if (buttonKey != info.selectedKey) {
         info.onChange && info.onChange(buttonKey);
+        info.onRefChange && info.onRefChange(buttonRef);
+      }
     };
 
     /* RadioButton changes selection when focus is moved between each RadioButton and on a click */
-    const pressable = useAsPressable({...rest,
+    const pressable = useAsPressable({
+      ...rest,
       onPress: () => {
         changeSelection();
       },
       onFocus: () => {
         changeSelection();
-      }});
-
-    const buttonRef = useViewCommandFocus(componentRef);
+      },
+    });
 
     // Used when creating accessibility properties in mergeSettings below
     const onAccessibilityAction = React.useCallback(
@@ -45,6 +47,7 @@ export const RadioButton = compose<IRadioButtonType>({
         switch (event.nativeEvent.actionName) {
           case 'Select':
             info.onChange && info.onChange(buttonKey);
+            info.onRefChange && info.onRefChange(buttonRef);
             break;
         }
       },
@@ -54,7 +57,7 @@ export const RadioButton = compose<IRadioButtonType>({
     const state = {
       ...pressable.state,
       selected: info.selectedKey === userProps.buttonKey,
-      disabled: disabled || false
+      disabled: disabled || false,
     };
 
     // Grab the styling information from the userProps, referencing the state as well as the props.

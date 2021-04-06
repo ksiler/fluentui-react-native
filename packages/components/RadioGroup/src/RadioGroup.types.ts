@@ -12,11 +12,12 @@ export interface IRadioGroupContext {
    ** The currently selected RadioButton's key
    */
   selectedKey: string | null;
-
   /*
    ** Updates the selected button and calls the client’s onChange callback
    */
   onChange?: (key: string) => void;
+
+  onRefChange?: (ref: React.RefObject<any>) => void;
 }
 
 export interface IRadioGroupState {
@@ -45,7 +46,6 @@ export interface IRadioGroupProps {
    ** and makes the RadioGroup a controlled component.
    */
   selectedKey?: string;
-
   /*
    ** Callback for receiving a notification when the choice has been changed
    */
