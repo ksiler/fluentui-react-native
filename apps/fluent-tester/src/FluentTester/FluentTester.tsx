@@ -96,7 +96,7 @@ export const FluentTester: React.FunctionComponent<FluentTesterProps> = (props: 
         >
           ⚛ FluentUI Tests
         </Text>
-        <ThemePickers />
+        {/*<ThemePickers />*/}
       </View>
     );
   };

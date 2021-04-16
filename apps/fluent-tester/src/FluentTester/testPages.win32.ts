@@ -1,4 +1,4 @@
-import { ButtonTest, HOMEPAGE_BUTTON_BUTTON } from './TestComponents/Button';
+/*import { ButtonTest, HOMEPAGE_BUTTON_BUTTON } from './TestComponents/Button';
 import { ExperimentalButtonTest, HOMEPAGE_BUTTON_BUTTONEXPERIMENTAL } from './TestComponents/ButtonExperimental';
 import { CalloutTest, HOMEPAGE_CALLOUT_BUTTON } from './TestComponents/Callout';
 import { CheckboxTest, HOMEPAGE_CHECKBOX_BUTTON } from './TestComponents/Checkbox';
@@ -8,17 +8,17 @@ import { FocusZoneTest, HOMEPAGE_FOCUSZONE_BUTTON } from './TestComponents/Focus
 import { HOMEPAGE_LINK_BUTTON, LinkTest } from './TestComponents/Link';
 import { HOMEPAGE_PERSONA_BUTTON, PersonaTest } from './TestComponents/Persona';
 import { HOMEPAGE_PERSONACOIN_BUTTON, PersonaCoinTest } from './TestComponents/PersonaCoin';
-import { HOMEPAGE_PRESSABLE_BUTTON, PressableTest } from './TestComponents/Pressable';
+import { HOMEPAGE_PRESSABLE_BUTTON, PressableTest } from './TestComponents/Pressable';*/
 import { HOMEPAGE_RADIOGROUP_BUTTON, RadioGroupTest } from './TestComponents/RadioGroup';
-import { HOMEPAGE_SEPARATOR_BUTTON, SeparatorTest } from './TestComponents/Separator';
+/*import { HOMEPAGE_SEPARATOR_BUTTON, SeparatorTest } from './TestComponents/Separator';
 import { HOMEPAGE_SVG_BUTTON, SvgTest } from './TestComponents/Svg';
 import { HOMEPAGE_TEXT_BUTTON, TextTest } from './TestComponents/Text';
 import { HOMEPAGE_THEME_BUTTON, ThemeTest } from './TestComponents/Theme';
-import { HOMEPAGE_ICON_BUTTON, IconTest } from './TestComponents/Icon';
+import { HOMEPAGE_ICON_BUTTON, IconTest } from './TestComponents/Icon';*/
 import { TestDescription } from './TestComponents';
 
 export const tests: TestDescription[] = [
-  {
+  /*{
     name: 'Button Test',
     component: ButtonTest,
     testPage: HOMEPAGE_BUTTON_BUTTON,
@@ -67,12 +67,12 @@ export const tests: TestDescription[] = [
     name: 'PersonaCoin Test',
     component: PersonaCoinTest,
     testPage: HOMEPAGE_PERSONACOIN_BUTTON,
-  },
+  },*/
   {
     name: 'RadioGroup Test',
     component: RadioGroupTest,
     testPage: HOMEPAGE_RADIOGROUP_BUTTON,
-  },
+  } /*
   {
     name: 'Persona Test',
     component: PersonaTest,
@@ -102,5 +102,5 @@ export const tests: TestDescription[] = [
     name: 'Icon Test',
     component: IconTest,
     testPage: HOMEPAGE_ICON_BUTTON,
-  },
+  },*/,
 ];

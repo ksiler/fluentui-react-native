@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { StyleSheet, View, Platform } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { Text, Separator } from '@fluentui/react-native';
-import { Stack } from '@fluentui-react-native/stack';
-import { stackStyle } from './Common/styles';
+/*import { Stack } from '@fluentui-react-native/stack';
+import { stackStyle } from './Common/styles';*/
 
 export type TestSection = {
   name: string;
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
 });
 
 // mobile platform check to not render status components.
-const isMobile = Platform.OS == 'android' || (Platform.OS == 'ios' && !Platform.isPad);
+// const isMobile = Platform.OS == 'android' || (Platform.OS == 'ios' && !Platform.isPad);
 
 export const Test = (props: TestProps) => {
   return (
@@ -64,7 +64,7 @@ export const Test = (props: TestProps) => {
         {props.name}
       </Text>
       <Separator />
-      <Stack style={stackStyle}>
+      {/*<Stack style={stackStyle}>
         <Text style={styles.description}>{props.description}</Text>
       </Stack>
       {!isMobile && (
@@ -117,7 +117,7 @@ export const Test = (props: TestProps) => {
             </Stack>
           </View>
         </Stack>
-      )}
+      )}*/}
       {props.sections.map((section, index) => {
         const TestComponent = section.component;
         return (
