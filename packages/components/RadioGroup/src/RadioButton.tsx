@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { View } from 'react-native';
 import { Text } from '@fluentui-react-native/text';
-import { IFocusable } from '@fluentui-react-native/interactive-hooks';
+// import { IFocusable } from '@fluentui-react-native/interactive-hooks';
 import { radioButtonName, IRadioButtonType, IRadioButtonProps, IRadioButtonSlotProps, IRadioButtonRenderData } from './RadioButton.types';
 import { compose, IUseComposeStyling } from '@uifabricshared/foundation-compose';
 import { filterViewProps } from '@fluentui-react-native/adapters';
@@ -11,24 +11,27 @@ import { ISlots, withSlots } from '@uifabricshared/foundation-composable';
 import { settings, radioButtonSelectActionLabel } from './RadioButton.settings';
 import { mergeSettings } from '@uifabricshared/foundation-settings';
 import { foregroundColorTokens, textTokens, borderTokens, backgroundColorTokens, getPaletteFromTheme } from '@fluentui-react-native/tokens';
-import { useAsPressable } from '@fluentui-react-native/interactive-hooks';
+import { useAsPressable, useViewCommandFocus } from '@fluentui-react-native/interactive-hooks';
 import { RadioGroupContext } from './RadioGroup';
 
 export const RadioButton = compose<IRadioButtonType>({
   displayName: radioButtonName,
 
   usePrepareProps: (userProps: IRadioButtonProps, useStyling: IUseComposeStyling<IRadioButtonType>) => {
-    const { content, buttonKey, disabled, ariaLabel, ...rest } = userProps;
+    const { content, buttonKey, disabled, ariaLabel, componentRef = React.useRef(null), ...rest } = userProps;
 
     // Grabs the context information from RadioGroup (currently selected button and client's onChange callback)
     const info = React.useContext(RadioGroupContext);
-    const buttonFocusRef = React.useRef<IFocusable>(null);
+
+    // const buttonFocusRef = React.useRef<IFocusable>(null);
+    const buttonFocusRef = useViewCommandFocus(componentRef);
+
     /* We don't want to call the user's onChange multiple times on the same selection. */
     const changeSelection = () => {
       if (buttonKey != info.selectedKey) {
         info.onChange && info.onChange(buttonKey);
-        info.onRefChange && buttonFocusRef && info.onRefChange(buttonFocusRef);
-        buttonFocusRef?.current?.focus();
+        info.onRefChange && componentRef && info.onRefChange(componentRef);
+        componentRef?.current?.focus();
       }
     };
 
@@ -49,7 +52,8 @@ export const RadioButton = compose<IRadioButtonType>({
         switch (event.nativeEvent.actionName) {
           case 'Select':
             info.onChange && info.onChange(buttonKey);
-            info.onRefChange && info.onRefChange(buttonFocusRef);
+            info.onRefChange && info.onRefChange(componentRef);
+            componentRef?.current?.focus();
             break;
         }
       },

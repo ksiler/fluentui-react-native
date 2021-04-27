@@ -24,11 +24,6 @@ const basicRadioGroup: React.FunctionComponent<{}> = () => {
     }
   }, []);
 
-  const ARef = React.createRef<View>();
-  const BRef = React.createRef<View>();
-  const CRef = React.createRef<View>();
-  const DRef = React.createRef<View>();
-
   return (
     <View>
       <RadioGroup label="Uncontrolled RadioGroup" defaultSelectedKey="B" onChange={onChange}>
@@ -39,10 +34,10 @@ const basicRadioGroup: React.FunctionComponent<{}> = () => {
       </RadioGroup>
       <Separator />
       <RadioGroup label="Controlled RadioGroup" selectedKey={selectedKey} onChange={onChange2}>
-        <RadioButton componentRef={ARef} content="Option A" buttonKey="A" ariaLabel="Test Aria Label" />
-        <RadioButton componentRef={BRef} content="Option B" buttonKey="B" />
-        <RadioButton componentRef={CRef} content="Option C" buttonKey="C" />
-        <RadioButton componentRef={DRef} content="Option D" buttonKey="D" />
+        <RadioButton content="Option A" buttonKey="A" ariaLabel="Test Aria Label" />
+        <RadioButton content="Option B" buttonKey="B" />
+        <RadioButton content="Option C" buttonKey="C" />
+        <RadioButton content="Option D" buttonKey="D" />
       </RadioGroup>
     </View>
   );
