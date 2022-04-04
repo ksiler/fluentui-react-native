@@ -12069,9 +12069,9 @@ prelude-ls@~1.1.2:
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
 prettier@^2.4.1:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.6.0.tgz#12f8f504c4d8ddb76475f441337542fa799207d4"
-  integrity sha512-m2FgJibYrBGGgQXNzfd0PuDGShJgRavjUoRCw1mZERIWVSXF0iLzLm+aOqTAbLnC3n6JzUhAA8uZnFVghHJ86A==
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.6.2.tgz#e26d71a18a74c3d0f0597f55f01fb6c06c206032"
+  integrity sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==
 
 pretty-format@^26.0.0, pretty-format@^26.5.2, pretty-format@^26.6.2:
   version "26.6.2"
@@ -12351,9 +12351,9 @@ react-native-codegen@^0.0.6:
     nullthrows "^1.1.1"
 
 react-native-macos@^0.64.0, react-native-macos@^0.64.6:
-  version "0.64.29"
-  resolved "https://registry.yarnpkg.com/react-native-macos/-/react-native-macos-0.64.29.tgz#9e302e000fe98403a6ef54961b5c7a1f569f936f"
-  integrity sha512-T2RtLeyMBTskTHshNao/dve41LFshFSSFDygjRszyEI1led1Alz3jBCC5SQCgjPBX+RlPa4lMkmT9bon0p0ECw==
+  version "0.64.30"
+  resolved "https://registry.yarnpkg.com/react-native-macos/-/react-native-macos-0.64.30.tgz#b2398677d421ce84476c355373539bbd9723829a"
+  integrity sha512-lhp7Imx+bERzOtwnWlyl/382CjIHid5KtWnjMVz+P7x71N/bGQx90ok3KOyN5BqjNnPE8WDTTYnDN/QMDrsJNA==
   dependencies:
     "@jest/create-cache-key-function" "^26.5.0"
     "@react-native-community/cli" "^5.0.1-alpha.1"
