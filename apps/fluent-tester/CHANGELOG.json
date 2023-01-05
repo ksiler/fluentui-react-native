@@ -2,6 +2,39 @@
   "name": "@fluentui-react-native/tester",
   "entries": [
     {
+      "date": "Thu, 05 Jan 2023 22:57:16 GMT",
+      "tag": "@fluentui-react-native/tester_v0.126.21",
+      "version": "0.126.21",
+      "comments": {
+        "patch": [
+          {
+            "author": "krsiler@microsoft.com",
+            "package": "@fluentui-react-native/tester",
+            "commit": "48d3bca78ff4bca131a70c28db31cd646e22c3ae",
+            "comment": "Fix NPM publish pipeline"
+          },
+          {
+            "author": "beachball",
+            "package": "@fluentui-react-native/tester",
+            "comment": "Bump @fluentui-react-native/experimental-checkbox to v0.13.27",
+            "commit": "830a4d6736606af0ef1e1cbcecb747be6d144fae"
+          },
+          {
+            "author": "beachball",
+            "package": "@fluentui-react-native/tester",
+            "comment": "Bump @fluentui-react-native/experimental-menu-button to v0.6.17",
+            "commit": "830a4d6736606af0ef1e1cbcecb747be6d144fae"
+          },
+          {
+            "author": "beachball",
+            "package": "@fluentui-react-native/tester",
+            "comment": "Bump @fluentui/react-native to v0.35.5",
+            "commit": "830a4d6736606af0ef1e1cbcecb747be6d144fae"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 05 Jan 2023 21:10:19 GMT",
       "tag": "@fluentui-react-native/tester_v0.126.20",
       "version": "0.126.20",

@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "Fix NPM publish pipeline",
-  "packageName": "@fluentui-react-native/experimental-checkbox",
-  "email": "krsiler@microsoft.com",
-  "dependentChangeType": "patch"
-}

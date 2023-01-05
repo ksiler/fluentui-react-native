@@ -2,6 +2,21 @@
   "name": "@fluentui-react-native/contextual-menu",
   "entries": [
     {
+      "date": "Thu, 05 Jan 2023 22:57:16 GMT",
+      "tag": "@fluentui-react-native/contextual-menu_v0.21.16",
+      "version": "0.21.16",
+      "comments": {
+        "patch": [
+          {
+            "author": "krsiler@microsoft.com",
+            "package": "@fluentui-react-native/contextual-menu",
+            "commit": "48d3bca78ff4bca131a70c28db31cd646e22c3ae",
+            "comment": "Fix NPM publish pipeline"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 05 Jan 2023 21:10:18 GMT",
       "tag": "@fluentui-react-native/contextual-menu_v0.21.15",
       "version": "0.21.15",

@@ -2,6 +2,27 @@
   "name": "@fluentui-react-native/experimental-menu-button",
   "entries": [
     {
+      "date": "Thu, 05 Jan 2023 22:57:15 GMT",
+      "tag": "@fluentui-react-native/experimental-menu-button_v0.6.17",
+      "version": "0.6.17",
+      "comments": {
+        "patch": [
+          {
+            "author": "krsiler@microsoft.com",
+            "package": "@fluentui-react-native/experimental-menu-button",
+            "commit": "48d3bca78ff4bca131a70c28db31cd646e22c3ae",
+            "comment": "Fix NPM publish pipeline"
+          },
+          {
+            "author": "beachball",
+            "package": "@fluentui-react-native/experimental-menu-button",
+            "comment": "Bump @fluentui-react-native/contextual-menu to v0.21.16",
+            "commit": "830a4d6736606af0ef1e1cbcecb747be6d144fae"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 05 Jan 2023 21:10:19 GMT",
       "tag": "@fluentui-react-native/experimental-menu-button_v0.6.16",
       "version": "0.6.16",

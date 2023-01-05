@@ -1,8 +1,19 @@
 # Change Log - @fluentui-react-native/tester
 
-This log was last generated on Thu, 05 Jan 2023 21:10:19 GMT and should not be manually modified.
+This log was last generated on Thu, 05 Jan 2023 22:57:16 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 0.126.21
+
+Thu, 05 Jan 2023 22:57:16 GMT
+
+### Patches
+
+- Fix NPM publish pipeline (krsiler@microsoft.com)
+- Bump @fluentui-react-native/experimental-checkbox to v0.13.27
+- Bump @fluentui-react-native/experimental-menu-button to v0.6.17
+- Bump @fluentui/react-native to v0.35.5
 
 ## 0.126.20
 

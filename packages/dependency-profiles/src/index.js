@@ -8,11 +8,11 @@ module.exports = {
     },
     "@fluentui-react-native/tester": {
       "name": "@fluentui-react-native/tester",
-      "version": "0.126.20"
+      "version": "0.126.21"
     },
     "@fluentui-react-native/tester-win32": {
       "name": "@fluentui-react-native/tester-win32",
-      "version": "0.31.44"
+      "version": "0.31.45"
     },
     "@fluentui-react-native/avatar": {
       "name": "@fluentui-react-native/avatar",
@@ -32,11 +32,11 @@ module.exports = {
     },
     "@fluentui-react-native/checkbox": {
       "name": "@fluentui-react-native/checkbox",
-      "version": "0.19.8"
+      "version": "0.19.9"
     },
     "@fluentui-react-native/contextual-menu": {
       "name": "@fluentui-react-native/contextual-menu",
-      "version": "0.21.15"
+      "version": "0.21.16"
     },
     "@fluentui-react-native/focus-trap-zone": {
       "name": "@fluentui-react-native/focus-trap-zone",
@@ -56,7 +56,7 @@ module.exports = {
     },
     "@fluentui-react-native/menu-button": {
       "name": "@fluentui-react-native/menu-button",
-      "version": "0.10.16"
+      "version": "0.10.17"
     },
     "@fluentui-react-native/menu": {
       "name": "@fluentui-react-native/menu",
@@ -144,7 +144,7 @@ module.exports = {
     },
     "@fluentui-react-native/experimental-checkbox": {
       "name": "@fluentui-react-native/experimental-checkbox",
-      "version": "0.13.26"
+      "version": "0.13.27"
     },
     "@fluentui-react-native/experimental-drawer": {
       "name": "@fluentui-react-native/experimental-drawer",
@@ -164,7 +164,7 @@ module.exports = {
     },
     "@fluentui-react-native/experimental-menu-button": {
       "name": "@fluentui-react-native/experimental-menu-button",
-      "version": "0.6.16"
+      "version": "0.6.17"
     },
     "@fluentui-react-native/experimental-native-date-picker": {
       "name": "@fluentui-react-native/experimental-native-date-picker",
@@ -252,7 +252,7 @@ module.exports = {
     },
     "@fluentui/react-native": {
       "name": "@fluentui/react-native",
-      "version": "0.35.4"
+      "version": "0.35.5"
     },
     "@fluentui-react-native/android-theme": {
       "name": "@fluentui-react-native/android-theme",

@@ -2,6 +2,27 @@
   "name": "@fluentui-react-native/experimental-checkbox",
   "entries": [
     {
+      "date": "Thu, 05 Jan 2023 22:57:16 GMT",
+      "tag": "@fluentui-react-native/experimental-checkbox_v0.13.27",
+      "version": "0.13.27",
+      "comments": {
+        "patch": [
+          {
+            "author": "krsiler@microsoft.com",
+            "package": "@fluentui-react-native/experimental-checkbox",
+            "commit": "48d3bca78ff4bca131a70c28db31cd646e22c3ae",
+            "comment": "Fix NPM publish pipeline"
+          },
+          {
+            "author": "beachball",
+            "package": "@fluentui-react-native/experimental-checkbox",
+            "comment": "Bump @fluentui-react-native/checkbox to v0.19.9",
+            "commit": "830a4d6736606af0ef1e1cbcecb747be6d144fae"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 05 Jan 2023 21:10:19 GMT",
       "tag": "@fluentui-react-native/experimental-checkbox_v0.13.26",
       "version": "0.13.26",
