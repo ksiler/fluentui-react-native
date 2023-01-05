@@ -1,6 +1,6 @@
 {
   "type": "patch",
-  "comment": "Fix NPM publish pipelien",
+  "comment": "Fix NPM publish pipeline",
   "packageName": "@fluentui-react-native/tester-win32",
   "email": "krsiler@microsoft.com",
   "dependentChangeType": "patch"
