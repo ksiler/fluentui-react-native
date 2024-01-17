@@ -1,7 +1,9 @@
 import * as React from 'react';
-import { View, Text, Switch, TextInput } from 'react-native';
+import { View, Text, TextInput } from 'react-native';
 
+import type { InteractionEvent } from '@fluentui/react-native';
 import { Persona } from '@fluentui/react-native';
+import { Switch } from '@fluentui-react-native/switch';
 import type { Theme } from '@fluentui-react-native/theme-types';
 import { useTheme } from '@fluentui-react-native/theme-types';
 import { themedStyleSheet } from '@fluentui-react-native/themed-stylesheet';
@@ -16,6 +18,8 @@ const getThemedStyles = themedStyleSheet((t: Theme) => {
 
 export const CustomizeUsage: React.FunctionComponent = () => {
   const [showImage, setShowImage] = React.useState(true);
+  const toggleShowImage = React.useCallback((_e: InteractionEvent, value?: boolean) => setShowImage(value), [setShowImage]);
+
   const [coinColor, setCoinColor] = React.useState<string>();
   const [textColor, setTextColor] = React.useState<string>();
 
@@ -50,7 +54,7 @@ export const CustomizeUsage: React.FunctionComponent = () => {
       <View style={commonStyles.settings}>
         <View style={commonStyles.switch}>
           <Text>Show image</Text>
-          <Switch value={showImage} onValueChange={setShowImage} />
+          <Switch checked={showImage} onChange={toggleShowImage} />
         </View>
 
         <TextInput

@@ -1,9 +1,11 @@
 import * as React from 'react';
-import { View, Switch } from 'react-native';
+import { View } from 'react-native';
 
 import { Text } from '@fluentui/react-native';
+import type { InteractionEvent } from '@fluentui/react-native';
 import { ActivityIndicator } from '@fluentui-react-native/experimental-activity-indicator';
 import { Stack } from '@fluentui-react-native/stack';
+import { Switch } from '@fluentui-react-native/switch';
 
 import { ACTIVITY_INDICATOR_TESTPAGE } from '../../../../E2E/src/ActivityIndicator/consts';
 import { stackStyle, commonTestStyles as commonStyles } from '../Common/styles';
@@ -12,7 +14,12 @@ import { Test } from '../Test';
 
 const BasicActivityIndicator: React.FunctionComponent = () => {
   const [animating, setAnimating] = React.useState(true);
+  const toggleAnimating = React.useCallback((_e: InteractionEvent, value?: boolean) => setAnimating(value), [setAnimating]);
   const [hidesWhenStopped, setHidesWhenStopped] = React.useState(true);
+  const toggleHidesWhenStopped = React.useCallback(
+    (_e: InteractionEvent, value?: boolean) => setHidesWhenStopped(value),
+    [setHidesWhenStopped],
+  );
 
   return (
     <Stack style={stackStyle}>
@@ -20,11 +27,11 @@ const BasicActivityIndicator: React.FunctionComponent = () => {
         <View style={commonStyles.settings}>
           <View style={commonStyles.switch}>
             <Text>Animating</Text>
-            <Switch value={animating} onValueChange={setAnimating} />
+            <Switch checked={animating} onChange={toggleAnimating} />
           </View>
           <View style={commonStyles.switch}>
             <Text>HidesWhenStopped</Text>
-            <Switch value={hidesWhenStopped} onValueChange={setHidesWhenStopped} />
+            <Switch checked={hidesWhenStopped} onChange={toggleHidesWhenStopped} />
           </View>
         </View>
         <ActivityIndicator animating={animating} hidesWhenStopped={hidesWhenStopped} />

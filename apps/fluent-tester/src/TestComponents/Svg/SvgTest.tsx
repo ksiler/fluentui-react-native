@@ -1,9 +1,12 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { StyleSheet, Switch, Text, TextInput, View } from 'react-native';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
 
+import type { InteractionEvent } from '@fluentui/react-native';
 import { ButtonV1 as Button, ToggleButton } from '@fluentui/react-native';
 import { Separator } from '@fluentui/react-native';
+import { Switch } from '@fluentui-react-native/switch';
+
 import {
   Circle,
   Defs,
@@ -43,8 +46,8 @@ const RectTest: React.FunctionComponent = () => {
     <React.Fragment>
       <View style={{ flexDirection: 'row', alignItems: 'center' }}>
         <Switch
-          value={useColorA}
-          onValueChange={(value) => {
+          checked={useColorA}
+          onChange={(_e: InteractionEvent, value?: boolean) => {
             setUseColorA(value);
           }}
         />

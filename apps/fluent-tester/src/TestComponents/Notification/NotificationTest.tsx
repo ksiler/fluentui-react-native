@@ -1,11 +1,13 @@
 import * as React from 'react';
-import { Animated, StyleSheet, Switch, TextInput, View } from 'react-native';
+import { Animated, StyleSheet, TextInput, View } from 'react-native';
 
 import { ButtonV1 as Button } from '@fluentui-react-native/button';
+import type { InteractionEvent } from '@fluentui/react-native';
 import { Text } from '@fluentui-react-native/experimental-text';
 import type { SvgIconProps } from '@fluentui-react-native/icon';
 import type { NotificationVariant } from '@fluentui-react-native/notification';
 import { Notification, NotificationVariants } from '@fluentui-react-native/notification';
+import { Switch } from '@fluentui-react-native/switch';
 
 import PlayButton from './assets/play_button.svg';
 import { StyledPicker } from '../Common/StyledPicker';
@@ -44,7 +46,10 @@ const CustomToast: React.FunctionComponent = () => {
   const [action, setAction] = React.useState('Listen');
 
   const [showIcon, setShowIcon] = React.useState(true);
+  const toggleShowIcon = React.useCallback((_e: InteractionEvent, value?: boolean) => setShowIcon(value), [setShowIcon]);
+
   const [showTitle, setShowTitle] = React.useState(true);
+  const toggleShowTitle = React.useCallback((_e: InteractionEvent, value?: boolean) => setShowTitle(value), [setShowTitle]);
 
   return (
     <View>
@@ -59,11 +64,11 @@ const CustomToast: React.FunctionComponent = () => {
       <TextInput value={action} onChangeText={setAction} style={styles.textInput} />
       <View style={commonStyles.switch}>
         <Text>Show icon </Text>
-        <Switch value={showIcon} onValueChange={setShowIcon} />
+        <Switch checked={showIcon} onChange={toggleShowIcon} />
       </View>
       <View style={commonStyles.switch}>
         <Text>Show title </Text>
-        <Switch value={showTitle} onValueChange={setShowTitle} />
+        <Switch checked={showTitle} onChange={toggleShowTitle} />
       </View>
       <View style={styles.notification}>
         <Notification

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import * as React from 'react';
-import { Text, View, Switch } from 'react-native';
+import { Text, View } from 'react-native';
 
 import {
   Text as FURNText,
@@ -12,6 +12,8 @@ import {
   Separator,
   Checkbox,
 } from '@fluentui/react-native';
+import type { InteractionEvent } from '@fluentui/react-native';
+import { Switch } from '@fluentui-react-native/switch';
 
 import { E2EContextualMenuTest } from './E2EContextualMenuTest';
 import { CONTEXTUALMENU_TESTPAGE } from '../../../../E2E/src/ContextualMenu/consts';
@@ -27,13 +29,19 @@ const ContextualMenuMainTest: React.FunctionComponent = () => {
   const [lastMenuItemClicked, setLastMenuItemClicked] = React.useState(null);
 
   const [isBeakVisible, setIsBeakVisible] = React.useState(false);
-  const onIsBeakVisibleChange = React.useCallback((value) => setIsBeakVisible(value), []);
+  const onIsBeakVisibleChange = React.useCallback((_e: InteractionEvent, value?: boolean) => setIsBeakVisible(value), []);
 
   const [focusOnMount, setShouldFocusOnMount] = React.useState(true);
-  const toggleFocusOnMount = React.useCallback((value) => setShouldFocusOnMount(value), [setShouldFocusOnMount]);
+  const toggleFocusOnMount = React.useCallback(
+    (_e: InteractionEvent, value?: boolean) => setShouldFocusOnMount(value),
+    [setShouldFocusOnMount],
+  );
 
   const [focusOnContainer, setShouldFocusOnContainer] = React.useState(false);
-  const toggleFocusOnContainer = React.useCallback((value) => setShouldFocusOnContainer(value), [setShouldFocusOnContainer]);
+  const toggleFocusOnContainer = React.useCallback(
+    (_e: InteractionEvent, value?: boolean) => setShouldFocusOnContainer(value),
+    [setShouldFocusOnContainer],
+  );
 
   const toggleShowContextualMenu = React.useCallback(() => {
     setShowContextualMenu(!showContextualMenu);
@@ -62,16 +70,16 @@ const ContextualMenuMainTest: React.FunctionComponent = () => {
         <View style={{ flexDirection: 'column', paddingHorizontal: 5 }}>
           <View style={{ flexDirection: 'row' }}>
             <Text>Should Focus on Mount</Text>
-            <Switch value={focusOnMount} onValueChange={toggleFocusOnMount} />
+            <Switch checked={focusOnMount} onChange={toggleFocusOnMount} />
           </View>
 
           <View style={{ flexDirection: 'row' }}>
             <Text>Should Focus on Container</Text>
-            <Switch value={focusOnContainer} onValueChange={toggleFocusOnContainer} />
+            <Switch checked={focusOnContainer} onChange={toggleFocusOnContainer} />
           </View>
           <View style={{ flexDirection: 'row' }}>
             <Text>Beak Visible</Text>
-            <Switch value={isBeakVisible} onValueChange={onIsBeakVisibleChange} />
+            <Switch checked={isBeakVisible} onChange={onIsBeakVisibleChange} />
           </View>
         </View>
 
@@ -126,10 +134,16 @@ const NestedContextualMenu: React.FunctionComponent = () => {
   const [isContextualMenuVisible, setIsContextualMenuVisible] = React.useState(false);
 
   const [focusOnMount, setShouldFocusOnMount] = React.useState(true);
-  const toggleFocusOnMount = React.useCallback((value) => setShouldFocusOnMount(value), [setShouldFocusOnMount]);
+  const toggleFocusOnMount = React.useCallback(
+    (_e: InteractionEvent, value?: boolean) => setShouldFocusOnMount(value),
+    [setShouldFocusOnMount],
+  );
 
   const [focusOnContainer, setShouldFocusOnContainer] = React.useState(false);
-  const toggleFocusOnContainer = React.useCallback((value) => setShouldFocusOnContainer(value), [setShouldFocusOnContainer]);
+  const toggleFocusOnContainer = React.useCallback(
+    (_e: InteractionEvent, value?: boolean) => setShouldFocusOnContainer(value),
+    [setShouldFocusOnContainer],
+  );
 
   const toggleShowContextualMenu = React.useCallback(() => {
     setShowContextualMenu(!showContextualMenu);
@@ -173,12 +187,12 @@ const NestedContextualMenu: React.FunctionComponent = () => {
         <View style={{ flexDirection: 'column', paddingHorizontal: 5 }}>
           <View style={{ flexDirection: 'row' }}>
             <Text>Should Focus on Mount</Text>
-            <Switch value={focusOnMount} onValueChange={toggleFocusOnMount} />
+            <Switch checked={focusOnMount} onChange={toggleFocusOnMount} />
           </View>
 
           <View style={{ flexDirection: 'row' }}>
             <Text>Should Focus on Container</Text>
-            <Switch value={focusOnContainer} onValueChange={toggleFocusOnContainer} />
+            <Switch checked={focusOnContainer} onChange={toggleFocusOnContainer} />
           </View>
         </View>
 
@@ -249,10 +263,16 @@ const IconContextualMenu: React.FunctionComponent = () => {
   const [isContextualMenuVisible, setIsContextualMenuVisible] = React.useState(false);
 
   const [focusOnMount, setShouldFocusOnMount] = React.useState(true);
-  const toggleFocusOnMount = React.useCallback((value) => setShouldFocusOnMount(value), [setShouldFocusOnMount]);
+  const toggleFocusOnMount = React.useCallback(
+    (_e: InteractionEvent, value?: boolean) => setShouldFocusOnMount(value),
+    [setShouldFocusOnMount],
+  );
 
   const [focusOnContainer, setShouldFocusOnContainer] = React.useState(false);
-  const toggleFocusOnContainer = React.useCallback((value) => setShouldFocusOnContainer(value), [setShouldFocusOnContainer]);
+  const toggleFocusOnContainer = React.useCallback(
+    (_e: InteractionEvent, value?: boolean) => setShouldFocusOnContainer(value),
+    [setShouldFocusOnContainer],
+  );
 
   const toggleShowContextualMenu = React.useCallback(() => {
     setShowContextualMenu(!showContextualMenu);
@@ -274,12 +294,12 @@ const IconContextualMenu: React.FunctionComponent = () => {
         <View style={{ flexDirection: 'column', paddingHorizontal: 5 }}>
           <View style={{ flexDirection: 'row' }}>
             <Text>Should Focus on Mount</Text>
-            <Switch value={focusOnMount} onValueChange={toggleFocusOnMount} />
+            <Switch checked={focusOnMount} onChange={toggleFocusOnMount} />
           </View>
 
           <View style={{ flexDirection: 'row' }}>
             <Text>Should Focus on Container</Text>
-            <Switch value={focusOnContainer} onValueChange={toggleFocusOnContainer} />
+            <Switch checked={focusOnContainer} onChange={toggleFocusOnContainer} />
           </View>
         </View>
 
@@ -331,13 +351,19 @@ const ScrollViewContextualMenu: React.FunctionComponent = () => {
   const [lastMenuItemClicked, setLastMenuItemClicked] = React.useState(null);
 
   const [isBeakVisible, setIsBeakVisible] = React.useState(false);
-  const onIsBeakVisibleChange = React.useCallback((value) => setIsBeakVisible(value), []);
+  const onIsBeakVisibleChange = React.useCallback((_e: InteractionEvent, value?: boolean) => setIsBeakVisible(value), []);
 
   const [focusOnMount, setShouldFocusOnMount] = React.useState(true);
-  const toggleFocusOnMount = React.useCallback((value) => setShouldFocusOnMount(value), [setShouldFocusOnMount]);
+  const toggleFocusOnMount = React.useCallback(
+    (_e: InteractionEvent, value?: boolean) => setShouldFocusOnMount(value),
+    [setShouldFocusOnMount],
+  );
 
   const [focusOnContainer, setShouldFocusOnContainer] = React.useState(false);
-  const toggleFocusOnContainer = React.useCallback((value) => setShouldFocusOnContainer(value), [setShouldFocusOnContainer]);
+  const toggleFocusOnContainer = React.useCallback(
+    (_e: InteractionEvent, value?: boolean) => setShouldFocusOnContainer(value),
+    [setShouldFocusOnContainer],
+  );
 
   const toggleShowContextualMenu = React.useCallback(() => {
     setShowContextualMenu(!showContextualMenu);
@@ -388,16 +414,16 @@ const ScrollViewContextualMenu: React.FunctionComponent = () => {
         <View style={{ flexDirection: 'column', paddingHorizontal: 5 }}>
           <View style={{ flexDirection: 'row' }}>
             <Text>Should Focus on Mount</Text>
-            <Switch value={focusOnMount} onValueChange={toggleFocusOnMount} />
+            <Switch checked={focusOnMount} onChange={toggleFocusOnMount} />
           </View>
 
           <View style={{ flexDirection: 'row' }}>
             <Text>Should Focus on Container</Text>
-            <Switch value={focusOnContainer} onValueChange={toggleFocusOnContainer} />
+            <Switch checked={focusOnContainer} onChange={toggleFocusOnContainer} />
           </View>
           <View style={{ flexDirection: 'row' }}>
             <Text>Beak Visible</Text>
-            <Switch value={isBeakVisible} onValueChange={onIsBeakVisibleChange} />
+            <Switch checked={isBeakVisible} onChange={onIsBeakVisibleChange} />
           </View>
         </View>
 

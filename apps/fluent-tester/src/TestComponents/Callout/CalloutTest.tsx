@@ -1,9 +1,10 @@
 import * as React from 'react';
 import type { KeyboardMetrics } from 'react-native';
-import { Text, View, Switch, ScrollView, Platform } from 'react-native';
+import { Text, View, ScrollView, Platform } from 'react-native';
 
 import { Button, Callout, Separator, Pressable, StealthButton } from '@fluentui/react-native';
-import type { IFocusable, RestoreFocusEvent, DismissBehaviors, ICalloutProps } from '@fluentui/react-native';
+import type { IFocusable, RestoreFocusEvent, DismissBehaviors, ICalloutProps, InteractionEvent } from '@fluentui/react-native';
+import { Switch } from '@fluentui-react-native/switch';
 
 import { E2ECalloutTest } from './CalloutE2ETest';
 import { CALLOUT_TESTPAGE } from '../../../../E2E/src/Callout/consts';
@@ -15,24 +16,27 @@ import { Test } from '../Test';
 const StandardCallout: React.FunctionComponent = () => {
   const [showStandardCallout, setShowStandardCallout] = React.useState(false);
   const [isStandardCalloutVisible, setIsStandardCalloutVisible] = React.useState(false);
+
   const [openCalloutOnHoverAnchor, setOpenCalloutOnHoverAnchor] = React.useState(true);
+  const onOpenCalloutOnHoverAnchor = React.useCallback((_e: InteractionEvent, value: boolean) => setOpenCalloutOnHoverAnchor(value), []);
+
   const [calloutHovered, setCalloutHovered] = React.useState(false);
 
   const [shouldSetInitialFocus, setShouldSetInitialFocus] = React.useState(true);
-  const onInitialFocusChange = React.useCallback((value: boolean) => setShouldSetInitialFocus(value), []);
+  const onInitialFocusChange = React.useCallback((_e: InteractionEvent, value: boolean) => setShouldSetInitialFocus(value), []);
 
   const [customRestoreFocus, setCustomRestoreFocus] = React.useState(false);
-  const onRestoreFocusChange = React.useCallback((value) => setCustomRestoreFocus(value), []);
+  const onRestoreFocusChange = React.useCallback((_e: InteractionEvent, value: boolean) => setCustomRestoreFocus(value), []);
 
   const [isBeakVisible, setIsBeakVisible] = React.useState(false);
-  const onIsBeakVisibleChange = React.useCallback((value) => setIsBeakVisible(value), []);
+  const onIsBeakVisibleChange = React.useCallback((_e: InteractionEvent, value: boolean) => setIsBeakVisible(value), []);
 
   const [preventDismissOnKeyDown, setPreventDismissOnKeyDown] = React.useState(false);
   const [preventDismissOnClickOutside, setPreventDismissOnClickOutside] = React.useState(false);
   const [calloutDismissBehaviors, setDismissBehaviors] = React.useState<DismissBehaviors[]>([]);
 
   const onPreventDismissOnKeyDownChange = React.useCallback(
-    (value) => {
+    (_e: InteractionEvent, value: boolean) => {
       setPreventDismissOnKeyDown(value);
       if (value) {
         setDismissBehaviors(calloutDismissBehaviors.concat('preventDismissOnKeyDown'));
@@ -47,7 +51,7 @@ const StandardCallout: React.FunctionComponent = () => {
   );
 
   const onPreventDismissOnClickOutsideChange = React.useCallback(
-    (value) => {
+    (_e: InteractionEvent, value: boolean) => {
       setPreventDismissOnClickOutside(value);
       if (value) {
         setDismissBehaviors(calloutDismissBehaviors.concat('preventDismissOnClickOutside'));
@@ -212,6 +216,8 @@ const StandardCallout: React.FunctionComponent = () => {
   const [selectedBorderRadius, setSelectedBorderRadius] = React.useState<string | undefined>(undefined);
 
   const [showScrollViewCallout, setShowScrollViewCalout] = React.useState(false);
+  const onShowScrollViewCalout = React.useCallback((_e: InteractionEvent, value: boolean) => setShowScrollViewCalout(value), []);
+
   const [scrollviewContents, setScrollviewContents] = React.useState([1, 2, 3]);
 
   const removeButton = React.useCallback(() => {
@@ -236,37 +242,37 @@ const StandardCallout: React.FunctionComponent = () => {
       <View style={{ flexDirection: 'row', paddingVertical: 5 }}>
         <View style={{ flexDirection: 'column', paddingHorizontal: 5 }}>
           <View style={{ flexDirection: 'row' }}>
-            <Switch value={openCalloutOnHoverAnchor} onValueChange={setOpenCalloutOnHoverAnchor} />
+            <Switch checked={openCalloutOnHoverAnchor} onChange={onOpenCalloutOnHoverAnchor} />
             <Text>Show Callout On Hover Anchor</Text>
           </View>
 
           <View style={{ flexDirection: 'row' }}>
-            <Switch value={shouldSetInitialFocus} onValueChange={onInitialFocusChange} />
+            <Switch checked={shouldSetInitialFocus} onChange={onInitialFocusChange} />
             <Text>Set Initial Focus</Text>
           </View>
 
           <View style={{ flexDirection: 'row' }}>
-            <Switch value={customRestoreFocus} onValueChange={onRestoreFocusChange} />
+            <Switch checked={customRestoreFocus} onChange={onRestoreFocusChange} />
             <Text>Customize Restore Focus</Text>
           </View>
 
           <View style={{ flexDirection: 'row' }}>
-            <Switch value={isBeakVisible} onValueChange={onIsBeakVisibleChange} />
+            <Switch checked={isBeakVisible} onChange={onIsBeakVisibleChange} />
             <Text>Beak Visible</Text>
           </View>
 
           <View style={{ flexDirection: 'row' }}>
-            <Switch value={preventDismissOnKeyDown} onValueChange={onPreventDismissOnKeyDownChange} />
+            <Switch checked={preventDismissOnKeyDown} onChange={onPreventDismissOnKeyDownChange} />
             <Text>Prevent Dismiss On Key Down</Text>
           </View>
 
           <View style={{ flexDirection: 'row' }}>
-            <Switch value={preventDismissOnClickOutside} onValueChange={onPreventDismissOnClickOutsideChange} />
+            <Switch checked={preventDismissOnClickOutside} onChange={onPreventDismissOnClickOutsideChange} />
             <Text>Prevent Dismiss On Click Outside</Text>
           </View>
 
           <View style={{ flexDirection: 'row' }}>
-            <Switch value={showScrollViewCallout} onValueChange={setShowScrollViewCalout} />
+            <Switch checked={showScrollViewCallout} onChange={onShowScrollViewCalout} />
             <Text>Enable ScrollView Callout</Text>
           </View>
 

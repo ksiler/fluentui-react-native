@@ -1,9 +1,11 @@
 import * as React from 'react';
-import { View, Switch } from 'react-native';
+import { View } from 'react-native';
 
+import type { InteractionEvent } from '@fluentui/react-native';
 import { Text } from '@fluentui/react-native';
 import { Expander } from '@fluentui-react-native/experimental-expander';
 import { Stack } from '@fluentui-react-native/stack';
+import { Switch } from '@fluentui-react-native/switch';
 
 import { EXPANDER_TESTPAGE } from './consts';
 import { stackStyle, commonTestStyles as commonStyles } from '../Common/styles';
@@ -40,6 +42,13 @@ const ExpanderMainTest: React.FunctionComponent = () => {
    */
 
   const [switchValue, setSwitchValue] = React.useState(false);
+  const toggleSwitchValue = React.useCallback(
+    (_e: InteractionEvent, value?: boolean) => {
+      setSwitchValue(value);
+    },
+    [setSwitchValue],
+  );
+
   const [expanderText, setExpanderText] = React.useState('Initial state');
   const onExpanding = () => {
     setExpanderText('Expanding event changed title');
@@ -74,7 +83,7 @@ const ExpanderMainTest: React.FunctionComponent = () => {
             <Text>Line one</Text>
             <Text>Line two</Text>
           </View>
-          <Switch style={{ marginLeft: 'auto', marginTop: 12 }} value={switchValue} onValueChange={setSwitchValue} />
+          <Switch style={{ marginLeft: 'auto', marginTop: 12 }} checked={switchValue} onChange={toggleSwitchValue} />
         </View>
         <View>
           <Text>First line of text</Text>

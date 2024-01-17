@@ -1,10 +1,12 @@
 import * as React from 'react';
-import { Platform, StyleSheet, Switch, View } from 'react-native';
+import { Platform, StyleSheet, View } from 'react-native';
 
+import type { InteractionEvent } from '@fluentui/react-native';
 import { Text, ToggleButton, Separator, Link } from '@fluentui/react-native';
 import { ButtonV1 as Button } from '@fluentui-react-native/button';
 import type { SvgIconProps } from '@fluentui-react-native/icon';
 import { Stack } from '@fluentui-react-native/stack';
+import { Switch } from '@fluentui-react-native/switch';
 import { useTheme } from '@fluentui-react-native/theme-types';
 import type { SvgProps } from 'react-native-svg';
 import Svg, { G, Path } from 'react-native-svg';
@@ -103,6 +105,12 @@ const styles = StyleSheet.create({
 export const Test = (props: TestProps): React.ReactElement<Record<string, never>> => {
   const [showStatus, setShowStatus] = React.useState(false);
   const [showE2E, setShowE2E] = React.useState(false);
+  const toggleShowE2E = React.useCallback(
+    (_e: InteractionEvent, value?: boolean) => {
+      setShowE2E(value);
+    },
+    [setShowE2E],
+  );
 
   const toggleSvg: React.FunctionComponent<SvgProps> = () => {
     const plusPath =
@@ -158,7 +166,7 @@ export const Test = (props: TestProps): React.ReactElement<Record<string, never>
             <Text style={styles.e2eSwitchLabel} {...(isMobile ? {} : { variant: 'body1Strong' })}>
               E2E Mode
             </Text>
-            <Switch onValueChange={setShowE2E} value={showE2E} {...testProps(E2E_MODE_SWITCH)} />
+            <Switch onChange={toggleShowE2E} checked={showE2E} {...testProps(E2E_MODE_SWITCH)} />
           </View>
         )}
         {props.spec && <Link url={props.spec} content="SPEC" />}

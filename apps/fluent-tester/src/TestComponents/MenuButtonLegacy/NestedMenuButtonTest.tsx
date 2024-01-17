@@ -1,7 +1,9 @@
 import * as React from 'react';
-import { Text, View, Switch } from 'react-native';
+import { Text, View } from 'react-native';
 
 import { Separator, MenuButton } from '@fluentui/react-native';
+import type { InteractionEvent } from '@fluentui/react-native';
+import { Switch } from '@fluentui-react-native/switch';
 
 import { viewWrapperStyle, columnStyle, rowStyle, textColor } from './MenuButtonLegacyTestStyles';
 import { menuItems, iconProps } from './testData';
@@ -11,10 +13,16 @@ export const NestedMenuButton: React.FunctionComponent = () => {
   const [lastMenuItemClicked, setLastMenuItemClicked] = React.useState(null);
 
   const [focusOnMount, setShouldFocusOnMount] = React.useState(true);
-  const toggleFocusOnMount = React.useCallback((value) => setShouldFocusOnMount(value), [setShouldFocusOnMount]);
+  const toggleFocusOnMount = React.useCallback(
+    (_e: InteractionEvent, value?: boolean) => setShouldFocusOnMount(value),
+    [setShouldFocusOnMount],
+  );
 
   const [focusOnContainer, setShouldFocusOnContainer] = React.useState(false);
-  const toggleFocusOnContainer = React.useCallback((value) => setShouldFocusOnContainer(value), [setShouldFocusOnContainer]);
+  const toggleFocusOnContainer = React.useCallback(
+    (_e: InteractionEvent, value?: boolean) => setShouldFocusOnContainer(value),
+    [setShouldFocusOnContainer],
+  );
 
   const onItemClick = React.useCallback(
     (key) => {
@@ -123,12 +131,12 @@ export const NestedMenuButton: React.FunctionComponent = () => {
         <View style={columnStyle}>
           <View style={rowStyle}>
             <Text>Should Focus on Mount</Text>
-            <Switch value={focusOnMount} onValueChange={toggleFocusOnMount} />
+            <Switch checked={focusOnMount} onChange={toggleFocusOnMount} />
           </View>
 
           <View style={rowStyle}>
             <Text>Should Focus on Container</Text>
-            <Switch value={focusOnContainer} onValueChange={toggleFocusOnContainer} />
+            <Switch checked={focusOnContainer} onChange={toggleFocusOnContainer} />
           </View>
         </View>
 
