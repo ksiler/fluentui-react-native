@@ -1,8 +1,42 @@
 # Change Log - @fluentui-react-native/tester
 
-This log was last generated on Thu, 04 Jan 2024 21:06:26 GMT and should not be manually modified.
+This log was last generated on Wed, 17 Jan 2024 01:26:39 GMT and should not be manually modified.
 
 <!-- Start content -->
+
+## 0.167.0
+
+Wed, 17 Jan 2024 01:26:39 GMT
+
+### Minor changes
+
+- Remove Tabs and Experimental Tabs test pages (winlarry@microsoft.com)
+- Bump @fluentui/react-native to v0.40.0
+
+## 0.166.0
+
+Wed, 10 Jan 2024 20:27:23 GMT
+
+### Minor changes
+
+- Update to react-native-test-app 3.0.0 (sanajmi@microsoft.com)
+
+## 0.165.2
+
+Wed, 10 Jan 2024 19:28:16 GMT
+
+### Patches
+
+- Bump @fluentui-react-native/radio-group to v0.20.8
+- Bump @fluentui/react-native to v0.39.13
+
+## 0.165.1
+
+Tue, 09 Jan 2024 20:05:27 GMT
+
+### Patches
+
+- Bump @fluentui-react-native/tablist to v0.5.13
 
 ## 0.165.0
 

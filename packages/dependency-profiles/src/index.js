@@ -4,15 +4,15 @@ module.exports = {
   "0.72": {
     "@fluentui-react-native/e2e-testing": {
       "name": "@fluentui-react-native/e2e-testing",
-      "version": "1.34.7"
+      "version": "1.34.8"
     },
     "@fluentui-react-native/tester": {
       "name": "@fluentui-react-native/tester",
-      "version": "0.165.0"
+      "version": "0.167.0"
     },
     "@fluentui-react-native/tester-win32": {
       "name": "@fluentui-react-native/tester-win32",
-      "version": "0.37.26"
+      "version": "0.37.30"
     },
     "@fluentui-react-native/avatar": {
       "name": "@fluentui-react-native/avatar",
@@ -92,7 +92,7 @@ module.exports = {
     },
     "@fluentui-react-native/radio-group": {
       "name": "@fluentui-react-native/radio-group",
-      "version": "0.20.7"
+      "version": "0.20.8"
     },
     "@fluentui-react-native/separator": {
       "name": "@fluentui-react-native/separator",
@@ -106,9 +106,9 @@ module.exports = {
       "name": "@fluentui-react-native/switch",
       "version": "0.12.6"
     },
-    "@fluentui-react-native/tabs": {
-      "name": "@fluentui-react-native/tabs",
-      "version": "0.14.7"
+    "@fluentui-react-native/tablist": {
+      "name": "@fluentui-react-native/tablist",
+      "version": "0.5.13"
     },
     "@fluentui-react-native/text": {
       "name": "@fluentui-react-native/text",
@@ -196,7 +196,7 @@ module.exports = {
     },
     "@fluentui-react-native/experimental-radio-group": {
       "name": "@fluentui-react-native/experimental-radio-group",
-      "version": "0.12.7"
+      "version": "0.12.8"
     },
     "@fluentui-react-native/experimental-shadow": {
       "name": "@fluentui-react-native/experimental-shadow",
@@ -209,14 +209,6 @@ module.exports = {
     "@fluentui-react-native/spinner": {
       "name": "@fluentui-react-native/spinner",
       "version": "0.8.6"
-    },
-    "@fluentui-react-native/tablist": {
-      "name": "@fluentui-react-native/tablist",
-      "version": "0.5.12"
-    },
-    "@fluentui-react-native/experimental-tabs": {
-      "name": "@fluentui-react-native/experimental-tabs",
-      "version": "0.10.7"
     },
     "@fluentui-react-native/experimental-text": {
       "name": "@fluentui-react-native/experimental-text",
@@ -284,7 +276,7 @@ module.exports = {
     },
     "@fluentui/react-native": {
       "name": "@fluentui/react-native",
-      "version": "0.39.12"
+      "version": "0.40.0"
     },
     "@fluentui-react-native/android-theme": {
       "name": "@fluentui-react-native/android-theme",
@@ -436,10 +428,6 @@ module.exports = {
       "name": "@fluentui-react-native/switch",
       "version": "0.11.7"
     },
-    "@fluentui-react-native/tabs": {
-      "name": "@fluentui-react-native/tabs",
-      "version": "0.13.19"
-    },
     "@fluentui-react-native/text": {
       "name": "@fluentui-react-native/text",
       "version": "0.21.14"
@@ -547,10 +535,6 @@ module.exports = {
     "@fluentui-react-native/tablist": {
       "name": "@fluentui-react-native/tablist",
       "version": "0.4.10"
-    },
-    "@fluentui-react-native/experimental-tabs": {
-      "name": "@fluentui-react-native/experimental-tabs",
-      "version": "0.9.21"
     },
     "@fluentui-react-native/experimental-text": {
       "name": "@fluentui-react-native/experimental-text",
