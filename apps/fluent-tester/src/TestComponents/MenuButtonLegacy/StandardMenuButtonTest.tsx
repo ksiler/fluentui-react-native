@@ -49,13 +49,11 @@ export const StandardMenuButton: React.FunctionComponent = () => {
       <View style={viewWrapperStyle}>
         <View style={columnStyle}>
           <View style={rowStyle}>
-            <Text>Should Focus on Mount</Text>
-            <Switch checked={focusOnMount} onChange={toggleFocusOnMount} />
+            <Switch label="Should Focus on Mount" labelPosition="before" checked={focusOnMount} onChange={toggleFocusOnMount} />
           </View>
 
           <View style={rowStyle}>
-            <Text>Should Focus on Container</Text>
-            <Switch checked={focusOnContainer} onChange={toggleFocusOnContainer} />
+            <Switch label="Should Focus on Container" labelPosition="before" checked={focusOnContainer} onChange={toggleFocusOnContainer} />
           </View>
         </View>
 

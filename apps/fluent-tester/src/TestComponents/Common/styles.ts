@@ -46,6 +46,7 @@ export const commonTestStyles = StyleSheet.create({
     margin: 8,
   },
   switch: {
+    // need?
     flexDirection: 'row',
     alignItems: 'center',
   },

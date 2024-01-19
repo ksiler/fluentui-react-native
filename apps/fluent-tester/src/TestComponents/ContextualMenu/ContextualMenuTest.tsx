@@ -69,17 +69,14 @@ const ContextualMenuMainTest: React.FunctionComponent = () => {
       <View style={{ flexDirection: 'row', paddingVertical: 5 }}>
         <View style={{ flexDirection: 'column', paddingHorizontal: 5 }}>
           <View style={{ flexDirection: 'row' }}>
-            <Text>Should Focus on Mount</Text>
-            <Switch checked={focusOnMount} onChange={toggleFocusOnMount} />
+            <Switch label="Should Focus on Mount" labelPosition="before" checked={focusOnMount} onChange={toggleFocusOnMount} />
           </View>
 
           <View style={{ flexDirection: 'row' }}>
-            <Text>Should Focus on Container</Text>
-            <Switch checked={focusOnContainer} onChange={toggleFocusOnContainer} />
+            <Switch label="Should Focus on Container" labelPosition="before" checked={focusOnContainer} onChange={toggleFocusOnContainer} />
           </View>
           <View style={{ flexDirection: 'row' }}>
-            <Text>Beak Visible</Text>
-            <Switch checked={isBeakVisible} onChange={onIsBeakVisibleChange} />
+            <Switch label="Beak Visible" labelPosition="before" checked={isBeakVisible} onChange={onIsBeakVisibleChange} />
           </View>
         </View>
 
@@ -186,13 +183,11 @@ const NestedContextualMenu: React.FunctionComponent = () => {
       <View style={{ flexDirection: 'row', paddingVertical: 5 }}>
         <View style={{ flexDirection: 'column', paddingHorizontal: 5 }}>
           <View style={{ flexDirection: 'row' }}>
-            <Text>Should Focus on Mount</Text>
-            <Switch checked={focusOnMount} onChange={toggleFocusOnMount} />
+            <Switch label="Should Focus on Mount" labelPosition="before" checked={focusOnMount} onChange={toggleFocusOnMount} />
           </View>
 
           <View style={{ flexDirection: 'row' }}>
-            <Text>Should Focus on Container</Text>
-            <Switch checked={focusOnContainer} onChange={toggleFocusOnContainer} />
+            <Switch label="Should Focus on Container" labelPosition="before" checked={focusOnContainer} onChange={toggleFocusOnContainer} />
           </View>
         </View>
 
@@ -293,13 +288,11 @@ const IconContextualMenu: React.FunctionComponent = () => {
       <View style={{ flexDirection: 'row', paddingVertical: 5 }}>
         <View style={{ flexDirection: 'column', paddingHorizontal: 5 }}>
           <View style={{ flexDirection: 'row' }}>
-            <Text>Should Focus on Mount</Text>
-            <Switch checked={focusOnMount} onChange={toggleFocusOnMount} />
+            <Switch label="Should Focus on Mount" labelPosition="before" checked={focusOnMount} onChange={toggleFocusOnMount} />
           </View>
 
           <View style={{ flexDirection: 'row' }}>
-            <Text>Should Focus on Container</Text>
-            <Switch checked={focusOnContainer} onChange={toggleFocusOnContainer} />
+            <Switch label="Should Focus on Container" labelPosition="before" checked={focusOnContainer} onChange={toggleFocusOnContainer} />
           </View>
         </View>
 
@@ -413,17 +406,14 @@ const ScrollViewContextualMenu: React.FunctionComponent = () => {
       <View style={{ flexDirection: 'row', paddingVertical: 5 }}>
         <View style={{ flexDirection: 'column', paddingHorizontal: 5 }}>
           <View style={{ flexDirection: 'row' }}>
-            <Text>Should Focus on Mount</Text>
-            <Switch checked={focusOnMount} onChange={toggleFocusOnMount} />
+            <Switch label="Should Focus on Mount" labelPosition="before" checked={focusOnMount} onChange={toggleFocusOnMount} />
           </View>
 
           <View style={{ flexDirection: 'row' }}>
-            <Text>Should Focus on Container</Text>
-            <Switch checked={focusOnContainer} onChange={toggleFocusOnContainer} />
+            <Switch label="Should Focus on Container" labelPosition="before" checked={focusOnContainer} onChange={toggleFocusOnContainer} />
           </View>
           <View style={{ flexDirection: 'row' }}>
-            <Text>Beak Visible</Text>
-            <Switch checked={isBeakVisible} onChange={onIsBeakVisibleChange} />
+            <Switch label="Beak Visible" labelPosition="before" checked={isBeakVisible} onChange={onIsBeakVisibleChange} />
           </View>
         </View>
 

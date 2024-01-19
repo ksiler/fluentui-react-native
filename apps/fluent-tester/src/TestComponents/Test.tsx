@@ -145,6 +145,7 @@ export const Test = (props: TestProps): React.ReactElement<Record<string, never>
   const { e2eSections } = props;
 
   const isMobile = Platform.OS === 'ios' || Platform.OS === 'android';
+  const E2ESwitch = Switch.customize({ ...(isMobile ? {} : { variant: 'body1Strong' }) });
 
   return (
     <View>
@@ -163,10 +164,7 @@ export const Test = (props: TestProps): React.ReactElement<Record<string, never>
         )}
         {props.e2eSections && (
           <View style={styles.e2eSwitch}>
-            <Text style={styles.e2eSwitchLabel} {...(isMobile ? {} : { variant: 'body1Strong' })}>
-              E2E Mode
-            </Text>
-            <Switch onChange={toggleShowE2E} checked={showE2E} {...testProps(E2E_MODE_SWITCH)} />
+            <E2ESwitch label="E2EMode" labelPosition="before" onChange={toggleShowE2E} checked={showE2E} {...testProps(E2E_MODE_SWITCH)} />
           </View>
         )}
         {props.spec && <Link url={props.spec} content="SPEC" />}

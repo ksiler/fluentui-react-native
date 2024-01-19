@@ -74,18 +74,15 @@ export const CustomizeUsage: React.FunctionComponent = () => {
       {/* settings */}
       <View style={commonStyles.settings}>
         <View style={commonStyles.switch}>
-          <Text>Show image</Text>
-          <Switch checked={showImage} onChange={toggleShowImage} />
+          <Switch label="Show image" labelPosition="before" checked={showImage} onChange={toggleShowImage} />
         </View>
 
         <View style={commonStyles.switch}>
-          <Text>Show rings</Text>
-          <Switch checked={showRing} onChange={toggleShowRing} />
+          <Switch label="Show rings" labelPosition="before" checked={showRing} onChange={toggleShowRing} />
         </View>
 
         <View style={commonStyles.switch}>
-          <Text>Transparent Ring</Text>
-          <Switch checked={transparent} onChange={toggleTransparent} />
+          <Switch label="Transparent Ring" labelPosition="before" checked={transparent} onChange={toggleTransparent} />
         </View>
 
         <TextInput

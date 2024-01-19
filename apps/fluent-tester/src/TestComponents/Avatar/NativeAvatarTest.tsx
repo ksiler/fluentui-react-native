@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { View } from 'react-native';
 
-import { Text } from '@fluentui/react-native';
 import type { InteractionEvent } from '@fluentui/react-native';
 import type { Size } from '@fluentui-react-native/experimental-avatar/';
 import { NativeAvatar } from '@fluentui-react-native/experimental-avatar/';
@@ -27,16 +26,13 @@ export const BasicAvatar: React.FunctionComponent = () => {
       {/* settings */}
       <View style={commonStyles.settings}>
         <View style={commonStyles.switch}>
-          <Text>Show image</Text>
-          <Switch checked={showImage} onChange={toggleShowImage} />
+          <Switch label="Show image" labelPosition="before" checked={showImage} onChange={toggleShowImage} />
         </View>
         <View style={commonStyles.switch}>
-          <Text>Show presence</Text>
-          <Switch checked={showPresence} onChange={toggleShowPresence} />
+          <Switch label="Show presence" labelPosition="before" checked={showPresence} onChange={toggleShowPresence} />
         </View>
         <View style={commonStyles.switch}>
-          <Text>Show Ring</Text>
-          <Switch checked={showRing} onChange={toggleSetShowRing} />
+          <Switch label="Show Ring" labelPosition="before" checked={showRing} onChange={toggleSetShowRing} />
         </View>
       </View>
       {/* component under test */}
@@ -81,24 +77,24 @@ export const CustomizeColors: React.FunctionComponent = () => {
       {/* settings */}
       <View style={commonStyles.settings}>
         <View style={commonStyles.switch}>
-          <Text>Custom foreground</Text>
-          <Switch checked={showCustomForeground} onChange={toggleShowCustomRingColor} />
+          <Switch label="Custom foreground" labelPosition="before" checked={showCustomForeground} onChange={toggleShowCustomRingColor} />
         </View>
         <View style={commonStyles.switch}>
-          <Text>Custom background</Text>
-          <Switch checked={showCustomBackground} onChange={toggleShowCustomForeground} />
+          <Switch label="Custom background" labelPosition="before" checked={showCustomBackground} onChange={toggleShowCustomForeground} />
         </View>
         <View style={commonStyles.switch}>
-          <Text>Custom ring color</Text>
-          <Switch checked={showCustomRingColor} onChange={toggleShowCustomBackground} />
+          <Switch label="Custom ring color" labelPosition="before" checked={showCustomRingColor} onChange={toggleShowCustomBackground} />
         </View>
         <View style={commonStyles.switch}>
-          <Text>Custom Border Image</Text>
-          <Switch checked={showCustomBorderImage} onChange={toggleShowCustomBorderImage} />
+          <Switch
+            label="Custom Border Image"
+            labelPosition="before"
+            checked={showCustomBorderImage}
+            onChange={toggleShowCustomBorderImage}
+          />
         </View>
         <View style={commonStyles.switch}>
-          <Text>Show Ring Gap</Text>
-          <Switch checked={showRingGap} onChange={toggleShowRingGap} />
+          <Switch label="Show Ring Gap" labelPosition="before" checked={showRingGap} onChange={toggleShowRingGap} />
         </View>
       </View>
       {/* component under test */}

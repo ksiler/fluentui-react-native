@@ -46,12 +46,12 @@ const RectTest: React.FunctionComponent = () => {
     <React.Fragment>
       <View style={{ flexDirection: 'row', alignItems: 'center' }}>
         <Switch
+          label="Change Color"
           checked={useColorA}
           onChange={(_e: InteractionEvent, value?: boolean) => {
             setUseColorA(value);
           }}
         />
-        <Text>Change Color</Text>
       </View>
       <Separator />
       <Svg width="50" height="50">

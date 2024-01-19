@@ -1,6 +1,6 @@
 import * as React from 'react';
 import type { ColorValue } from 'react-native';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 
 import type { InteractionEvent, PersonaSize, PersonaCoinFluentColor, PersonaPresence } from '@fluentui/react-native';
 import { PersonaCoin } from '@fluentui/react-native';
@@ -65,15 +65,14 @@ export const StandardUsage: React.FunctionComponent = () => {
   const onPresenceChange = React.useCallback((value) => setPresence(value), []);
 
   const theme = useTheme();
-  const textStyles = { color: theme.colors.inputText as ColorValue };
+  const StyledSwitch = Switch.customize({ color: theme.colors.inputText as ColorValue });
 
   return (
     <View style={commonStyles.root}>
       {/* settings */}
       <View style={commonStyles.settingsPicker}>
         <View style={commonStyles.switch}>
-          <Text style={textStyles}>Show image</Text>
-          <Switch checked={showImage} onChange={toggleShowImage} />
+          <StyledSwitch label="Show image" labelPosition="before" checked={showImage} onChange={toggleShowImage} />
         </View>
         <StyledPicker prompt="Size" selected={imageSize} onChange={onSizeChange} collection={allSizes} />
         <StyledPicker prompt="Coin color" selected={coinColor} onChange={onColorChange} collection={allColors} />

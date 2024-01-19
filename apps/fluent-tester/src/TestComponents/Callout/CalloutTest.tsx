@@ -242,38 +242,35 @@ const StandardCallout: React.FunctionComponent = () => {
       <View style={{ flexDirection: 'row', paddingVertical: 5 }}>
         <View style={{ flexDirection: 'column', paddingHorizontal: 5 }}>
           <View style={{ flexDirection: 'row' }}>
-            <Switch checked={openCalloutOnHoverAnchor} onChange={onOpenCalloutOnHoverAnchor} />
-            <Text>Show Callout On Hover Anchor</Text>
+            <Switch label="Show Callout On Hover Anchor" checked={openCalloutOnHoverAnchor} onChange={onOpenCalloutOnHoverAnchor} />
           </View>
 
           <View style={{ flexDirection: 'row' }}>
-            <Switch checked={shouldSetInitialFocus} onChange={onInitialFocusChange} />
-            <Text>Set Initial Focus</Text>
+            <Switch label="Set Initial Focus" checked={shouldSetInitialFocus} onChange={onInitialFocusChange} />
           </View>
 
           <View style={{ flexDirection: 'row' }}>
-            <Switch checked={customRestoreFocus} onChange={onRestoreFocusChange} />
-            <Text>Customize Restore Focus</Text>
+            <Switch label="Customize Restore Focus" checked={customRestoreFocus} onChange={onRestoreFocusChange} />
           </View>
 
           <View style={{ flexDirection: 'row' }}>
-            <Switch checked={isBeakVisible} onChange={onIsBeakVisibleChange} />
-            <Text>Beak Visible</Text>
+            <Switch label="Beak Visible" checked={isBeakVisible} onChange={onIsBeakVisibleChange} />
           </View>
 
           <View style={{ flexDirection: 'row' }}>
-            <Switch checked={preventDismissOnKeyDown} onChange={onPreventDismissOnKeyDownChange} />
-            <Text>Prevent Dismiss On Key Down</Text>
+            <Switch label="Prevent Dismiss On Key Down" checked={preventDismissOnKeyDown} onChange={onPreventDismissOnKeyDownChange} />
           </View>
 
           <View style={{ flexDirection: 'row' }}>
-            <Switch checked={preventDismissOnClickOutside} onChange={onPreventDismissOnClickOutsideChange} />
-            <Text>Prevent Dismiss On Click Outside</Text>
+            <Switch
+              label="Prevent Dismiss On Click Outside"
+              checked={preventDismissOnClickOutside}
+              onChange={onPreventDismissOnClickOutsideChange}
+            />
           </View>
 
           <View style={{ flexDirection: 'row' }}>
-            <Switch checked={showScrollViewCallout} onChange={onShowScrollViewCalout} />
-            <Text>Enable ScrollView Callout</Text>
+            <Switch label="Enable ScrollView Callout" checked={showScrollViewCallout} onChange={onShowScrollViewCalout} />
           </View>
 
           <MenuPicker

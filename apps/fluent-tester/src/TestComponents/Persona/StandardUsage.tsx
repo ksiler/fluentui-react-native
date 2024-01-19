@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 
 import type { InteractionEvent, PersonaSize } from '@fluentui/react-native';
 import { Persona } from '@fluentui/react-native';
@@ -32,22 +32,6 @@ const allSizesCollection = allSizes.map((size) => {
   };
 });
 
-interface ISwitchWithLabelProps {
-  label: string;
-  value: boolean;
-  onChange: (e: InteractionEvent, value?: boolean) => void;
-}
-
-function SwitchWithLabel(props: ISwitchWithLabelProps): React.ReactElement {
-  const { label, value, onChange } = props;
-  return (
-    <View style={commonStyles.switch}>
-      <Text>{label}</Text>
-      <Switch checked={value} onChange={onChange} />
-    </View>
-  );
-}
-
 export const StandardUsage: React.FunctionComponent = () => {
   const [showImage, setShowImage] = React.useState(true);
   const toggleShowImage = React.useCallback((_e: InteractionEvent, value?: boolean) => setShowImage(value), [setShowImage]);
@@ -70,11 +54,11 @@ export const StandardUsage: React.FunctionComponent = () => {
     <View style={commonStyles.root}>
       {/* settings */}
       <View style={commonStyles.settings}>
-        <SwitchWithLabel label="Show image" value={showImage} onChange={toggleShowImage} />
-        <SwitchWithLabel label="Show primary text" value={showPrimary} onChange={toggleShowPrimary} />
-        <SwitchWithLabel label="Show secondary text" value={showSecondary} onChange={toggleShowSecondary} />
-        <SwitchWithLabel label="Show tertiary text" value={showTertiary} onChange={toggleShowTertiary} />
-        <SwitchWithLabel label="Show optional text" value={showOptional} onChange={toggleShowOptional} />
+        <Switch label="Show image" labelPosition="before" checked={showImage} onChange={toggleShowImage} />
+        <Switch label="Show primary text" labelPosition="before" checked={showPrimary} onChange={toggleShowPrimary} />
+        <Switch label="Show secondary text" labelPosition="before" checked={showSecondary} onChange={toggleShowSecondary} />
+        <Switch label="Show tertiary text" labelPosition="before" checked={showTertiary} onChange={toggleShowTertiary} />
+        <Switch label="Show optional text" labelPosition="before" checked={showOptional} onChange={toggleShowOptional} />
         <MenuPicker
           prompt="Size"
           style={commonStyles.header}

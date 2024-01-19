@@ -26,12 +26,10 @@ const BasicActivityIndicator: React.FunctionComponent = () => {
       <View style={commonStyles.root}>
         <View style={commonStyles.settings}>
           <View style={commonStyles.switch}>
-            <Text>Animating</Text>
-            <Switch checked={animating} onChange={toggleAnimating} />
+            <Switch label="Animating" labelPosition="before" checked={animating} onChange={toggleAnimating} />
           </View>
           <View style={commonStyles.switch}>
-            <Text>HidesWhenStopped</Text>
-            <Switch checked={hidesWhenStopped} onChange={toggleHidesWhenStopped} />
+            <Switch label="HidesWhenStopped" labelPosition="before" checked={hidesWhenStopped} onChange={toggleHidesWhenStopped} />
           </View>
         </View>
         <ActivityIndicator animating={animating} hidesWhenStopped={hidesWhenStopped} />

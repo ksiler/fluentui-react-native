@@ -53,8 +53,7 @@ export const CustomizeUsage: React.FunctionComponent = () => {
       {/* settings */}
       <View style={commonStyles.settings}>
         <View style={commonStyles.switch}>
-          <Text>Show image</Text>
-          <Switch checked={showImage} onChange={toggleShowImage} />
+          <Switch label="Show image" labelPosition="before" checked={showImage} onChange={toggleShowImage} />
         </View>
 
         <TextInput
