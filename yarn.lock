@@ -7925,13 +7925,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"appium-android-driver@npm:^7.8.1":
-  version: 7.8.1
-  resolution: "appium-android-driver@npm:7.8.1"
+"appium-adb@npm:^12.0.2":
+  version: 12.0.3
+  resolution: "appium-adb@npm:12.0.3"
+  dependencies:
+    "@appium/support": ^4.0.0
+    "@devicefarmer/adbkit-apkreader": ^3.2.4
+    async-lock: ^1.0.0
+    asyncbox: ^3.0.0
+    bluebird: ^3.4.7
+    ini: ^4.1.1
+    lodash: ^4.0.0
+    lru-cache: ^10.0.0
+    semver: ^7.0.0
+    source-map-support: ^0.x
+    teen_process: ^2.0.1
+  checksum: 5bb5edf29da1653197a16f7cbd7a627ee2601c9a7a0eb89e3c43bd9063aa7042827e4a91d3204d8caa01bbcb6cf44679891a6a62330d981fbd2789ee921cf10c
+  languageName: node
+  linkType: hard
+
+"appium-android-driver@npm:^8.2.0":
+  version: 8.2.0
+  resolution: "appium-android-driver@npm:8.2.0"
   dependencies:
     "@appium/support": ^4.2.0
     "@colors/colors": ^1.6.0
-    appium-adb: ^12.0.0
+    appium-adb: ^12.0.2
     appium-chromedriver: ^5.5.1
     asyncbox: ^3.0.0
     axios: ^1.x
@@ -7949,7 +7968,7 @@ __metadata:
     ws: ^8.0.0
   peerDependencies:
     appium: ^2.0.0-beta.40
-  checksum: 093b2885d85b1c4563fa32d0155e238c4061d10381392f53d8e391dacef87c6b1b5acfecbc069c67f4c4e4b21f3d071d944a1216da9ace212bf79ffd684bc233
+  checksum: c71b40080eb0e87919a4e7e1c6871b8018a3323a4d5505aa3cde0a3dcef21e191b6e13b290c2f591a3a26f850dbd1a150e727d61f9ed2594edc60657d44d0bd4
   languageName: node
   linkType: hard
 
@@ -8065,13 +8084,13 @@ __metadata:
   linkType: hard
 
 "appium-uiautomator2-driver@npm:^2.29.0":
-  version: 2.42.1
-  resolution: "appium-uiautomator2-driver@npm:2.42.1"
+  version: 2.44.3
+  resolution: "appium-uiautomator2-driver@npm:2.44.3"
   dependencies:
     appium-adb: ^12.0.0
-    appium-android-driver: ^7.8.1
+    appium-android-driver: ^8.2.0
     appium-chromedriver: ^5.6.28
-    appium-uiautomator2-server: ^6.0.3
+    appium-uiautomator2-server: ^6.0.7
     asyncbox: ^3.0.0
     axios: ^1.6.5
     bluebird: ^3.5.1
@@ -8084,14 +8103,14 @@ __metadata:
     type-fest: ^4.4.0
   peerDependencies:
     appium: ^2.4.1
-  checksum: efcebf8ab3d669fab41da05b51ef0963deb611a88d6f08e0d921cfb6dc8b07a984a71216f5d11a5588a16faf825ae4c8d4eddfc4d757efb27741a1a7d746311b
+  checksum: e112d12796dba691308d864ca986fd002d59935f68d8ae350816d67fed057a3db3edd2cf4264ab5d26cdc3703d970386983d970cefa01630373c53c1da2e6d66
   languageName: node
   linkType: hard
 
-"appium-uiautomator2-server@npm:^6.0.3":
-  version: 6.0.3
-  resolution: "appium-uiautomator2-server@npm:6.0.3"
-  checksum: 075bf8d1489b706a9f8fa512b8789f8a14848ce55f1b58eb8a00c3224d2284aaa871eb79da5d146dcd42bc101ec2e0d22016aa8086435a7df21eb85c6b650306
+"appium-uiautomator2-server@npm:^6.0.7":
+  version: 6.0.7
+  resolution: "appium-uiautomator2-server@npm:6.0.7"
+  checksum: ccd5e7de14957ac06104c7d23b22eec4157f4f6725880ab3042d59a0ffccdb8a19080e0ce0d939c4b5fcbea3901d1a5ebddc955c05f4a66f75b4d5a26fd17a13
   languageName: node
   linkType: hard
 
