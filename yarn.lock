@@ -6316,12 +6316,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rnx-kit/react-native-host@npm:^0.4.4":
-  version: 0.4.4
-  resolution: "@rnx-kit/react-native-host@npm:0.4.4"
+"@rnx-kit/react-native-host@npm:^0.4.5":
+  version: 0.4.5
+  resolution: "@rnx-kit/react-native-host@npm:0.4.5"
   peerDependencies:
     react-native: ">=0.66"
-  checksum: a56704eab09f9d007f7f33a0ad368d3b1e0d4e2ce459ae3146d86f5cb3a92dc8cb8f26e9b3d72c6f46b8715c210d4c4a1c484d9b5258c42ac9a036be784c7e8d
+  checksum: 2af669862b4154c04549d7de29f88a80d1a37b12dcf5824d130271f43542fa570e31ea8d5ae6cad0191f90aea9d04401b1872d21a6def7f0bb69721e7f47b64b
   languageName: node
   linkType: hard
 
@@ -18918,22 +18918,22 @@ __metadata:
   linkType: hard
 
 "react-native-test-app@npm:^3.1.1":
-  version: 3.3.5
-  resolution: "react-native-test-app@npm:3.3.5"
+  version: 3.4.5
+  resolution: "react-native-test-app@npm:3.4.5"
   dependencies:
-    "@rnx-kit/react-native-host": ^0.4.4
+    "@rnx-kit/react-native-host": ^0.4.5
     ajv: ^8.0.0
     cliui: ^8.0.0
     fast-xml-parser: ^4.0.0
     prompts: ^2.4.0
     semver: ^7.3.5
-    uuid: ^8.3.2
+    uuid: ^9.0.0
     yoctocolors: ^2.0.0
   peerDependencies:
     "@callstack/react-native-visionos": 0.73
     "@expo/config-plugins": ">=5.0"
     react: 17.0.1 - 18.2
-    react-native: ^0.0.0-0 || 0.66 - 0.73 || 1000.0.0
+    react-native: 0.66 - 0.74 || >=0.75.0-0 <0.75.0
     react-native-macos: ^0.0.0-0 || 0.66 || 0.68 || 0.71 - 0.73
     react-native-windows: ^0.0.0-0 || 0.66 - 0.73
   peerDependenciesMeta:
@@ -18950,7 +18950,7 @@ __metadata:
     init: scripts/init.mjs
     init-test-app: scripts/init.mjs
     install-windows-test-app: windows/test-app.mjs
-  checksum: 11969799bbb067d83270944b87fa782f0a89757e3dcd4acde3873946af0802dc353e31a40b703a4102229d06c74b45bec40595895e9a6bd726cd53d3f83e535d
+  checksum: ff6a0cd695687718b8a5519a08fa00040738beafb634d891f3bf5e293bfa990b1eab9ad75029919d75f5ebb8ea10cdc8776bb13c37271b553173afb31b2ce8a8
   languageName: node
   linkType: hard
 
@@ -21512,7 +21512,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uuid@npm:^8.3.0, uuid@npm:^8.3.2":
+"uuid@npm:^8.3.0":
   version: 8.3.2
   resolution: "uuid@npm:8.3.2"
   bin:
