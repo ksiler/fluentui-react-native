@@ -13,7 +13,13 @@ yarn
 yarn build
 ```
 
-2. Then go into `apps/fluent-tester/macos` folder and run pod install to pull in the project-level Cocoapod dependencies defined in the podfile, and to generate a valid xcworkspace:
+2. Go into the `apps/fluent-tester/` folder and run:
+
+```sh
+yarn bundle:macos
+```
+
+3. Then go into the `apps/fluent-tester/macos` folder and run pod install to pull in the project-level Cocoapod dependencies defined in the podfile, and to generate a valid xcworkspace:
 
 ```sh
 cd apps/fluent-tester/macos
