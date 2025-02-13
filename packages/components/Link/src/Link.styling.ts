@@ -16,6 +16,7 @@ export const stylingSettings: UseStylingOptions<LinkProps, LinkSlotProps, LinkTo
       (tokens: LinkTokens) => ({
         style: {
           alignSelf: tokens.alignSelf,
+          ...{cursor: 'pointer'} as any,
         },
       }),
       ['alignSelf'],

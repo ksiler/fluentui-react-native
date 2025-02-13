@@ -19,11 +19,11 @@ const DefaultLinks: React.FunctionComponent = () => {
 
   return (
     <Stack style={stackStyle}>
-      <Link tooltip={'https://www.bing.com/'} url="https://www.bing.com/">
-        Click to navigate.
+      <Link tooltip={'https://www.bing.com/'} url="https://www.bing.com/" style={{padding: 20, margin: 20, backgroundColor: "yellow"}}>
+        Link with padding.
       </Link>
-      <Link onPress={doPress} onAccessibilityTap={doAllyTap}>
-        Click to alert.
+      <Link onPress={doPress} onAccessibilityTap={doAllyTap} style={{margin: 20}}>
+        Link with no padding.
       </Link>
       <Link disabled>Disabled Link</Link>
     </Stack>
